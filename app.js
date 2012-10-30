@@ -22,6 +22,12 @@ commander
 			String, 
 			"all");
 commander
+	.version('0.1.0')
+	.option('-r, --rest [rest,rest,...]', 
+			'Continuous the list remaining parser:', 
+			String, 
+			"none");
+commander
 	.command('parse')
 	.description("Parse URL")
 	.action(function () {
@@ -42,28 +48,33 @@ if (!isCommand){
 		crawler.load(url);
 	}
 	else {
-
-		if(commander.list != "all"){
-			console.log("Montar lista de URL a partir de: " + commander.list);
-
-			crawler.loadList(commander.list, function(_list){
-					if(_list != null){
-						commander.confirm("Buscar informações a partir de todas URLs? [y/n] ", function (seguro){
-							if (seguro){
-								crawler.load(_list);
-							}else{
-								console.log("Fim da execução!");
-							}
-							process.stdin.destroy();
-						});
-					}else{
-					 	console.log("Não há lista para varredura!");
-					}
-			});
-			
-
+		if(commander.rest == "all"){
+			console.log("iniciando recarregamento...");
+			crawler.reload();
+			process.stdin.destroy();
 		}else{
-			console.log("Não há varredura!");
+			if(commander.list != "all"){
+				console.log("Montar lista de URL a partir de: " + commander.list);
+
+				crawler.loadList(commander.list, function(_list){
+						if(_list != null){
+							commander.confirm("Buscar informações a partir de todas URLs? [y/n] ", function (seguro){
+								if (seguro){
+									crawler.load(_list);
+								}else{
+									console.log("Fim da execução!");
+								}
+								process.stdin.destroy();
+							});
+						}else{
+						 	console.log("Não há lista para varredura!");
+						}
+				});
+				
+
+			}else{
+				console.log("Não há varredura!");
+			}
 		}
 	}
 }
