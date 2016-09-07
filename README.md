@@ -1,7 +1,6 @@
-Movie Crawler
-=============
+Movie Crawler v0.0.1
+====================
 
-# movie-crawler v0.0.1
 
 [Site](http://rcmedia.com/) |
 [Docs](https://rcmedia.com/docs) |
@@ -24,4 +23,4 @@ $ npm install
 
 MovieCrawler is released under the [MIT license](https://raw.githubusercontent.com/ricardocalvo/movie-crawler/0.0.1/LICENSE).<br>
 
-//Comments
+
