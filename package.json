@@ -1,0 +1,25 @@
+{
+  "name": "movie-crawler",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Crawler to get all movies content around the world",
+  "author": "Ricardo Calvo",
+  "contributors": [{
+    "name": "",
+    "email": "contato@rcmedia.com.br"
+  }],
+  "main": "crawler.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ricardocalvo/movie-crawler.git"
+  },
+  "dependencies": {
+    "express": "~4.13.4"
+  },
+  "devDependencies": {
+    "uglify-js": "2.7.0"
+  }
+}
