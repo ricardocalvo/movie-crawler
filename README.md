@@ -19,6 +19,11 @@ $ cd movie-crawler
 $ npm install
 ```
 
+Pre Requisite
+-------------
+
+Be shure jshint and jscs are installed on your system.
+
 ## Download
 
 MovieCrawler is released under the [MIT license](https://raw.githubusercontent.com/ricardocalvo/movie-crawler/0.0.1/LICENSE).<br>
