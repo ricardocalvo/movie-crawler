@@ -8,18 +8,28 @@
     "name": "",
     "email": "contato@rcmedia.com.br"
   }],
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "main": "crawler.js",
   "scripts": {
-    "start": "node start.js"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/ricardocalvo/movie-crawler.git"
   },
   "dependencies": {
-    "express": "~4.13.4"
+    "express": "~4.13.4",
+    "jshint": "~2.9.1"
   },
   "devDependencies": {
-    "uglify-js": "2.7.0"
+    "uglify-js": "2.7.0",
+    "grunt": "^1.0.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.0",
+    "grunt-contrib-concat": "~1.0.0",
+    "grunt-contrib-qunit": ">1.0.0",
+    "grunt-contrib-watch": "~1.0.0"
   }
 }
